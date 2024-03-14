@@ -67,7 +67,7 @@
             inputs.nixos-wsl.nixosModules.default
             ./modules/nixos-wsl/override-build-tarball.nix
             # > Our main nixos configuration file <
-            ./hosts/lilapdul02/configuration.nix
+            ./hosts/daimyo00/configuration.nix
           ];
         };
       };
