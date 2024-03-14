@@ -39,7 +39,7 @@
     auto-optimise-store = true;
   };
 
-  networking.hostName = "daimyo00";
+  networking.hostName = "lilapdul02";
   networking.networkmanager.enable = true;
   systemd.services.NetworkManager-wait-online.enable = false;
   
