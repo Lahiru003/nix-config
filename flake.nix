@@ -56,10 +56,10 @@
       homeManagerModules = import ./modules/home-manager;
 
       # NixOS configuration entrypoint~
-      # Available through 'nixos-rebuild --flake .#daimyo00'
+      # Available through 'nixos-rebuild --flake .#lilapdul02'
       nixosConfigurations = {
         # FIXME replace with your hostname
-        daimyo00 = nixpkgs.lib.nixosSystem {
+        lilapdul02 = nixpkgs.lib.nixosSystem {
           specialArgs = { inherit inputs outputs; };
           system = "x86_64-linux"; # Explicitly set the system to resolve the error
           modules = [
@@ -67,16 +67,16 @@
             inputs.nixos-wsl.nixosModules.default
             ./modules/nixos-wsl/override-build-tarball.nix
             # > Our main nixos configuration file <
-            ./hosts/daimyo00/configuration.nix
+            ./hosts/lilapdul02/configuration.nix
           ];
         };
       };
 
       # Standalone home-manager configuration entrypoint
-      # Available through 'home-manager --flake .#ryzengrind@daimyo00'
+      # Available through 'home-manager --flake .#lahiru003@lilapdul02'
       homeConfigurations = {
         # FIXME replace with your username@hostname
-        "ryzengrind@daimyo00" = home-manager.lib.homeManagerConfiguration {
+        "lahiru003@lilapdul02" = home-manager.lib.homeManagerConfiguration {
           pkgs =
             nixpkgs.legacyPackages.x86_64-linux; # Home-manager requires 'pkgs' instance
           extraSpecialArgs = { inherit inputs outputs; };
